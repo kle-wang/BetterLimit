@@ -1,0 +1,7 @@
+name: BetterLimit
+version: '${project.version}'
+main: cn.ikaile.BetterLimit
+api-version: 1.18
+commands:
+  blmit:
+    usage: /blmit
