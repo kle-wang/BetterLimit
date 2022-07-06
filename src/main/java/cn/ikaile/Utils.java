@@ -12,7 +12,7 @@ public class Utils {
             playerMoneyHashMap.put(player,num);
         }
         if(isEnoughMoney(player)){
-            int money = playerMoneyHashMap.get(player);
+            int money   = playerMoneyHashMap.get(player);
             playerMoneyHashMap.put(player,(money+num));
             econ.depositPlayer(player, num);
             int tempMoney = (limitTotal-money);
@@ -23,7 +23,8 @@ public class Utils {
         }
     }
     public static boolean isEnoughMoney(Player player){
-        return playerMoneyHashMap.get(player) < limitTotal;
+
+        return (playerMoneyHashMap.getOrDefault(player,0)) < limitTotal;
     }
     public static Player findPlayer(String s){
         return Bukkit.getPlayer(s);

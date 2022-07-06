@@ -11,7 +11,6 @@ public class Runnable extends BukkitRunnable {
     @Override
     public void run() {
        if(calendar.get(Calendar.DAY_OF_MONTH) != day){
-           playerMoneyHashMap.clear();
            playerMoneyHashMap = new HashMap<>();
            day = calendar.get(Calendar.DAY_OF_MONTH);
        }
